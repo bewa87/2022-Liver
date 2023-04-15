@@ -96,9 +96,9 @@ err_log  = log10(err);
 ind_theo = 1:1:5;
 
 figure(1)
-plot(ind_theo,err_log)
+plot(ind_theo,err_log,"linestyle","--","linewidth",2)
 hold on
-plot(ind_theo,-2*ind_theo+4)
+plot(ind_theo,-2*ind_theo+4.,"linestyle","-","linewidth",2)
 hold off
 title("Example 1: Logarithmic Convergence Plot Of Newton-Type Algorithm")
 xlabel("Number k Of Newton-Iterate")

@@ -205,11 +205,11 @@ endfor
 % Step 4: Solution Plots
 
 figure(1)
-plot(t_6,x_6_nsfd);
+plot(t_6,x_6_nsfd,"linestyle","--","linewidth",2);
 hold on
-plot(t_6,y_6_nsfd);
+plot(t_6,y_6_nsfd,"linestyle","-.","linewidth",2);
 hold on
-plot(t_6,z_6_nsfd);
+plot(t_6,z_6_nsfd,"linestyle",":","linewidth",2);
 legend("x(t)","y(t)","z(t)")
 title("Example 3: Convergence To Equilibrium (h = 0.0625)")
 xlabel("t")
@@ -226,15 +226,15 @@ z_end    = [abs(z_1_nsfd(end)-z_s) abs(z_2_nsfd(end)-z_s) abs(z_3_nsfd(end)-z_s)
 comp_end = [x_end; y_end; z_end];
 
 figure(2)
-plot(log10(h_v),log10(x_end));
+plot(log10(h_v),log10(x_end),"linestyle","--","linewidth",2);
 hold on
-plot(log10(h_v),log10(y_end));
+plot(log10(h_v),log10(y_end),"linestyle","-.","linewidth",2);
 hold on
-plot(log10(h_v),log10(z_end));
+plot(log10(h_v),log10(z_end),"linestyle",":","linewidth",2);
 hold on
-plot(log10(h_v),1*log10(h_v));
+plot(log10(h_v),1*log10(h_v),"linestyle","-","linewidth",2);
 hold off
-legend("x","y","z","Theoretical Order 1")
+legend("x","y","z","Theoretical Order 1","location","southeast")
 title("Example 3: Double-Logarithmic Convergence Plot")
 xlabel("log(h)")
 ylabel("Logarithmic Distance Of Sol.-Components And Equilibrium")

@@ -25,7 +25,7 @@ z_start = 3.0;
 % Step 2: Definition of Time Intervals and Solution Vectors
 
 T    = 4;
-h_v  = [2 1 0.5 0.1 0.01];
+h_v  = [2 1 0.5 0.01 0.01];
 
 % Step 2.1: Different Time Vectors for Different Time Steps
 
@@ -420,7 +420,7 @@ hold on
 plot(t_4,x_4_ee)
 hold on
 plot(t_4,x_4_rk2)
-title("Example 2: Time Step h = 0.1")
+title("Example 2: Time Step h = 0.01")
 xlabel("t")
 ylabel("x(t)")
 %legend({"(M1)", "(M2)", "(M3)"},"location","northwest")
